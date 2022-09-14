@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<!-- ¢ = option + 4 -->
+<!-- ƒ = option + f -->
+
+
+  <menu>
+    <div class="money-wrapper">
+      <div class="title">Title: <span data-display="title">x</span></div>
+      <div class="level">Level: <span data-display="level">x</span></div>
+      <div class="exp">Exp: <span data-display="exp">x</span></div>
+      <div class="cash">Cash: ƒ00,00</div>
+      <div class="bank">Bank: ƒ00,00</div>
+    </div>
+    <div class="realtime-wrapper">
+<!--      <div data-counter="candies">0 candies</div>-->
+      <div data-counter="time">00:00:00</div>
+    </div>
+  </menu>
+
+  <div class="wrapper">
+
+    <!-- // column 1 - character/ profile -->
+    <div class="column column-char">
+      <h1>Mastermxx</h1>
+      <img class="profile-img" src="img/pw_image_profile.jpg" height="300" width="300" alt="">
+      <div class="button-wrapper">
+        <div class="button">
+          <div class="icon">
+            <img src="img/pw_icon_wand.png" height="50" width="50" alt="">
+          </div>
+        </div>
+        <div class="button">
+          <div class="icon">
+            <img src="img/pw_icon_bag.png" height="50" width="50" alt="">
+          </div>
+        </div>
+        <div class="button">
+          <div class="icon">
+            <img src="img/pw_icon_gun.png" height="50" width="50" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // column 2 - main -->
+    <div class="column column-main">
+      <div class="button" data-apply="factory">
+        <div class="icon">Apply</div>
+        <div class="text">Become factory worker</div>
+      </div>
+      <div class="button" data-action="mep">
+        <div class="icon">Mep!</div>
+        <div class="text">Mep op een steen</div>
+      </div>
+    </div>
+
+    <!-- // column 3 - activity log -->
+    <div class="column column-activity">
+      <h1>activity log</h1>
+      <div class="activity-log" data-display="activity">
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
