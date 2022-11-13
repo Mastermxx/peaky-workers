@@ -1,4 +1,4 @@
-console.log('current version: 1.3');
+console.log('current version: 1.4');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
@@ -54,17 +54,17 @@ function actionMep() {
     localStorage.removeItem('localCash');
     currentExp = tempExp;
     currentCash = tempCash;
-    updateStats(currentExp, currentCash);
+    localStorage.setItem('localExp', currentExp);
+    localStorage.setItem('localCash', currentCash);
+    updateStats();
   })
 }
 
-function updateStats(currentExp, currentCash) {
-    localStorage.setItem('localExp', currentExp);
-    localStorage.setItem('localCash', currentCash);
+function updateStats() {
     expDisplay.innerHTML = currentExp;
     levelDisplay.innerHTML = currentLevel;
     titleDisplay.innerHTML = currentTitle;
-    updateLevel(currentExp);
+    updateLevel();
 }
 
 
