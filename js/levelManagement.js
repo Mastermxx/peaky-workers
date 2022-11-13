@@ -19,7 +19,6 @@ function updateLevel() {
     currentLevel = 6;
       break;
     default:
-      currentLevel = 1;
   }
   localStorage.setItem('localLevel', currentLevel);
 }
