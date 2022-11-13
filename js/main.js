@@ -1,7 +1,9 @@
-console.log('current version: 1.2');
+console.log('current version: 1.3');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
+const cashDisplay = document.querySelector('[data-display="cash"]');
+const bankDisplay = document.querySelector('[data-display="bank"]');
 const levelDisplay = document.querySelector('[data-display="level"]');
 const titleDisplay = document.querySelector('[data-display="title"]');
 const becomeFactoryWorker = document.querySelector('[data-apply="factory"]');
@@ -12,14 +14,20 @@ const resetLocalstorageButton = document.querySelector('[data-action="reset"]');
 let currentExp = localStorage.getItem('localExp');
 let currentLevel = localStorage.getItem('localLevel');
 let currentTitle = localStorage.getItem('localTitle');
+let currentCash = localStorage.getItem('localCash');
+let currentBank = localStorage.getItem('localBank');
 
 if (!currentExp) localStorage.setItem('localExp', 0);
 if (!currentLevel) localStorage.setItem('localLevel', 0);
 if (!currentTitle) localStorage.setItem('localTitle', 'Scrub');
+if (!currentCash) localStorage.setItem('localCash', 0);
+if (!currentBank) localStorage.setItem('localBank', 0);
 
 console.log('localExp', currentExp);
 console.log('localLevel', currentLevel);
 console.log('localTitle', currentTitle);
+console.log('localCash', currentCash);
+console.log('localBank', currentBank);
 
 let activityLog = ''
 
@@ -40,22 +48,23 @@ function applyJob() {
 
 function actionMep() {
   actionMepButton.addEventListener('click', function() {
-    console.log(currentExp)
+    let tempCash = currentCash + 1;
     let tempExp = currentExp + 10;
-    console.log(tempExp)
     localStorage.removeItem('localExp');
+    localStorage.removeItem('localCash');
     currentExp = tempExp;
-    localStorage.setItem('localExp', currentExp);
-    console.log('localExp', currentExp);
-    updateStats();
+    currentCash = tempCash;
+    updateStats(currentExp, currentCash);
   })
 }
 
-function updateStats() {
+function updateStats(currentExp, currentCash) {
+    localStorage.setItem('localExp', currentExp);
+    localStorage.setItem('localCash', currentCash);
     expDisplay.innerHTML = currentExp;
     levelDisplay.innerHTML = currentLevel;
     titleDisplay.innerHTML = currentTitle;
-    updateLevel();
+    updateLevel(currentExp);
 }
 
 
