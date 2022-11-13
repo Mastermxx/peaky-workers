@@ -1,4 +1,4 @@
-console.log('current version: 1.5');
+console.log('current version: 1.6');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
