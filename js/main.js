@@ -41,7 +41,8 @@ function actionMep() {
     let tempExp = currentExp + 10;
     localStorage.removeItem('localExp');
     currentExp = tempExp;
-    // localStorage.setItem('localExp', currentExp);
+    localStorage.setItem('localExp', currentExp);
+    console.log('localExp', currentExp)
     updateStats();
   })
 }
