@@ -1,4 +1,4 @@
-console.log('current version: 1.6');
+console.log('current version: 1.7');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
@@ -52,8 +52,8 @@ function applyJob() {
 
 function actionMep() {
   actionMepButton.addEventListener('click', function() {
-    let tempCash = currentCash + 1;
-    let tempExp = currentExp + 10;
+    let tempCash = parseInt(currentCash) + 1;
+    let tempExp = parseInt(currentExp) + 10;
     localStorage.removeItem('localExp');
     localStorage.removeItem('localCash');
     currentExp = tempExp;
