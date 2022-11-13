@@ -1,4 +1,4 @@
-console.log('current version: 1.9');
+console.log('current version: 2.0');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
@@ -93,7 +93,15 @@ function resetLocalstorage() {
 
 function stealAction() {
    actionStealButton.addEventListener('click', function() {
-     console.log('bla bla')
+     let successPercentage = 15;
+     const randomNumber = Math.floor(Math.random() * 100);
+     console.log(randomNumber);
+     if (randomNumber <= successPercentage) {
+       console.log('you stoled, gud job!');
+     } else {
+       successPercentage = -1;
+       console.log(successPercentage)
+     }
    })
 }
 
