@@ -90,7 +90,7 @@ function resetLocalstorage() {
 function stealAction() {
    actionStealButton.addEventlistener('click', function() {
      console.log('bla bla')
-   }
+   })
 }
 
 
