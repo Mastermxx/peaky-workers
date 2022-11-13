@@ -1,4 +1,4 @@
-console.log('current version: 1.7');
+console.log('current version: 1.8');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
@@ -84,6 +84,8 @@ function resetLocalstorage() {
     localStorage.removeItem('localExp');
     localStorage.removeItem('localLevel');
     localStorage.removeItem('localTitle');
+    localStorage.removeItem('localCash');
+    localStorage.removeItem('localBank');
   })
 }
 
