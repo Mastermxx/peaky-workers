@@ -1,3 +1,4 @@
+console.log('current version: 1.0');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
@@ -16,9 +17,9 @@ if (!currentExp) localStorage.setItem('localExp', 0);
 if (!currentLevel) localStorage.setItem('localLevel', 0);
 if (!currentTitle) localStorage.setItem('localTitle', 'Scrub');
 
-console.log('localExp', currentExp)
-console.log('localLevel', currentLevel)
-console.log('localTitle', currentTitle)
+console.log('localExp', currentExp);
+console.log('localLevel', currentLevel);
+console.log('localTitle', currentTitle);
 
 let activityLog = ''
 
@@ -42,7 +43,7 @@ function actionMep() {
     localStorage.removeItem('localExp');
     currentExp = tempExp;
     localStorage.setItem('localExp', currentExp);
-    console.log('localExp', currentExp)
+    console.log('localExp', currentExp);
     updateStats();
   })
 }
