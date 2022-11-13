@@ -1,4 +1,4 @@
-console.log('current version: 1.4');
+console.log('current version: 1.5');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
@@ -6,9 +6,13 @@ const cashDisplay = document.querySelector('[data-display="cash"]');
 const bankDisplay = document.querySelector('[data-display="bank"]');
 const levelDisplay = document.querySelector('[data-display="level"]');
 const titleDisplay = document.querySelector('[data-display="title"]');
-const becomeFactoryWorker = document.querySelector('[data-apply="factory"]');
 const activityDisplay = document.querySelector('[data-display="activity"]');
+
+const becomeFactoryWorker = document.querySelector('[data-apply="factory"]');
+
 const actionMepButton = document.querySelector('[data-action="mep"]');
+const actionStealButton = document.querySelector('[data-action="steal"]');
+
 const resetLocalstorageButton = document.querySelector('[data-action="reset"]');
 
 let currentExp = localStorage.getItem('localExp');
@@ -81,6 +85,12 @@ function resetLocalstorage() {
     localStorage.removeItem('localLevel');
     localStorage.removeItem('localTitle');
   })
+}
+
+function stealAction() {
+   actionStealButton.addEventlistener('click', function() {
+     console.log('bla bla')
+   }
 }
 
 
