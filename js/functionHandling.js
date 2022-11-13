@@ -3,6 +3,7 @@
 
 applyJob();
 actionMep();
+stealAction();
 
 setInterval( () => {
   updateStats();
