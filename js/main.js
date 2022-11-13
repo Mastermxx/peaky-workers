@@ -1,4 +1,4 @@
-console.log('current version: 1.8');
+console.log('current version: 1.9');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
@@ -68,6 +68,8 @@ function updateStats() {
     expDisplay.innerHTML = currentExp;
     levelDisplay.innerHTML = currentLevel;
     titleDisplay.innerHTML = currentTitle;
+    cashDisplay.innerHTML = currentCash;
+    bankDisplay.innerHTML = currentBank;
     updateLevel();
 }
 
