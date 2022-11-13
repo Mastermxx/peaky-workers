@@ -1,4 +1,4 @@
-console.log('current version: 1.1');
+console.log('current version: 1.2');
 // Selectors
 const localtimeDisplay = document.querySelector('[data-counter="time"]');
 const expDisplay = document.querySelector('[data-display="exp"]');
@@ -31,6 +31,7 @@ function applyJob() {
       titleDisplay.innerHTML = currentTitle;
       activityLog += `You've become a factory worker`;
       activityDisplay.innerHTML = activityLog;
+      becomeFactoryWorker.style.display = 'none';
     } else {
       console.log('You already have a job');
     }
